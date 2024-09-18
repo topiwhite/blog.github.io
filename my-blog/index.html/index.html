@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog pribadi Muhammad Abdul Hafiedh Rettob, berisi tentang hobby dalam dunia IT.">
+    <meta name="keywords" content="Muhammad Abdul Hafiedh Rettob, blog pribadi, dunia IT, hobby IT, pemrograman">
+    <meta name="author" content="Muhammad Abdul Hafiedh Rettob">
+    <title>Blog Saya - Muhammad Abdul Hafiedh Rettob</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: opacity 0.5s ease-in-out;
+            opacity: 1;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #555;
+        }
+        nav a {
+            color: #00ff99;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #00f;
+            text-decoration: underline;
+        }
+        #search-form {
+            text-align: center;
+            margin: 20px 0;
+        }
+        #search-form input, #search-form button {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: 1px solid #00f;
+        }
+        #search-form button {
+            background-color: #00f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #welcome-container {
+            padding: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #welcome-message {
+            font-size: 2.5em;
+            color: #00f;
+            text-shadow: 0 0 5px #00f, 0 0 10px #00f;
+            margin: 0;
+        }
+        #introduction {
+            font-size: 1.5em;
+            margin-top: 20px;
+            line-height: 1.5em;
+        }
+        #mysterious-image {
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            margin-left: 20px;
+        }
+        #content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .post-card {
+            background-color: #222;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            width: 80%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7);
+        }
+        .post-title {
+            font-size: 1.8em;
+            color: #00ff99;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #ccc;
+            padding: 10px;
+            border-top: 1px solid #555;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: #00ff99;
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            color: #00f;
+        }
+    </style>
+    <script>
+        function transitionToPage(url) {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                window.location.href = url;
+            }, 500);
+        }
+
+        window.onload = function() {
+            document.body.style.opacity = '1';
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Blog Saya</h1>
+        <nav>
+            <a href="#home" onclick="transitionToPage('index.html')">Beranda</a>
+            <a href="#about" onclick="transitionToPage('about.html')">Tentang</a>
+            <a href="#contact" onclick="transitionToPage('contact.html')">Hubungi Saya</a>
+            <a href="#tugas" onclick="transitionToPage('tugas_kampus.html')">Tugas Kampus</a>
+        </nav>
+    </header>
+
+    <div id="search-form">
+        <form action="#" method="get">
+            <input type="text" name="search" placeholder="Cari di blog...">
+            <button type="submit">Cari</button>
+        </form>
+    </div>
+
+    <div id="welcome-container">
+        <div id="text-container">
+            <h1 id="welcome-message">Selamat datang di website blog saya</h1>
+            <p id="introduction">
+                Nama : Muhammad Abdul Hafiedh Rettob<br>
+                npm : 121055520124121<br>
+                <span id="hobby">Hobby dalam dunia IT</span>
+            </p>
+        </div>
+        <img src="hem.jpg" alt="Gambar Misterius" id="mysterious-image">
+    </div>
+
+    <div id="content">
+        <div class="post-card" onclick="transitionToPage('article1.html')">
+            <h2 class="post-title">Menggali Potensi AI dalam Pemrograman</h2>
+            <p>Di era digital saat ini, kecerdasan buatan (AI) telah menjadi alat penting bagi para pemrogram. Artikel ini membahas bagaimana AI dapat membantu mempercepat proses pengembangan perangkat lunak dan meningkatkan efisiensi kerja.</p>
+        </div>
+        <div class="post-card" onclick="transitionToPage('article2.html')">
+            <h2 class="post-title">Tren Terbaru dalam Pengembangan Web</h2>
+            <p>Pada tahun 2024, pengembangan web terus berinovasi dengan teknologi seperti Jamstack dan serverless architecture. Kami akan menjelajahi tren ini dan apa artinya bagi pengembang di seluruh dunia.</p>
+        </div>
+    </div>
+
+    <div class="social-links">
+        <h3>Ikuti saya di media sosial:</h3>
+        <a href="#" target="_blank">Facebook</a>
+        <a href="#" target="_blank">Twitter</a>
+        <a href="#" target="_blank">Instagram</a>
+    </div>
+
+    <footer>
+        © 2024 Muhammad Abdul Hafiedh Rettob. All rights reserved.
+    </footer>
+</body>
+</html>

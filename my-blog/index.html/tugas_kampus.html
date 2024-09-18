@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Kampus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: opacity 0.5s ease-in-out;
+            opacity: 1;
+        }
+        header, footer {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 1px solid #555;
+        }
+        .task-card {
+            background-color: #222;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function transitionToPage(url) {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                window.location.href = url;
+            }, 500);
+        }
+        window.onload = function() {
+            document.body.style.opacity = '1';
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Tugas Kampus</h1>
+        <nav>
+            <a href="#" onclick="transitionToPage('index.html')">Kembali ke Blog</a>
+        </nav>
+    </header>
+
+    <div id="content">
+        <div class="task-card" onclick="transitionToPage('tugas1.html')">
+            <h2>Tugas 1: </h2>
+            <p>Detail singkat tentang tugas 1...</p>
+        </div>
+        <div class="task-card" onclick="transitionToPage('tugas2.html')">
+            <h2>Tugas 2: </h2>
+            <p>Detail singkat tentang tugas 2...</p>
+        </div>
+        <div class="task-card" onclick="transitionToPage('tugas3.html')">
+            <h2>Tugas 3: </h2>
+            <p>Detail singkat tentang tugas 3...</p>
+        </div>
+    </div>
+
+    <footer>
+        © 2024 Muhammad Abdul Hafiedh Rettob. All rights reserved.
+    </footer>
+</body>
+</html>

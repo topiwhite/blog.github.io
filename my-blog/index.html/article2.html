@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tren Terbaru dalam Pengembangan Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: opacity 0.5s ease-in-out;
+            opacity: 1;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a1a1a;
+            border-bottom: 1px solid #555;
+            opacity: 0; /* Awalnya tidak terlihat */
+            transition: opacity 1s ease-in;
+        }
+        .back-link {
+            color: #00ff99;
+            text-decoration: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .article-content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background-color: #222;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+    </style>
+    <script>
+        function transitionToHome() {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 500); // Waktu delay sama dengan durasi transisi
+        }
+
+        window.onload = function() {
+            document.body.style.opacity = '1';
+            const header = document.querySelector('header');
+            header.style.opacity = '1'; // Tampilkan judul dengan transisi
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Tren Terbaru dalam Pengembangan Web</h1>
+    </header>
+
+    <div class="article-content">
+        <p>Pengembangan web telah mengalami perubahan besar dalam beberapa tahun terakhir, dan tahun 2024 adalah tahun yang menarik untuk melihat berbagai inovasi yang muncul. Salah satu tren utama adalah penggunaan arsitektur Jamstack, yang menggabungkan JavaScript, API, dan markup statis untuk menciptakan situs web yang cepat dan aman.</p>
+        <p>Arsitektur ini memungkinkan pengembang untuk membangun aplikasi yang lebih responsif dan meningkatkan pengalaman pengguna secara keseluruhan. Selain itu, serverless architecture menjadi semakin populer, memungkinkan pengembang untuk fokus pada penulisan kode tanpa harus khawatir tentang manajemen server.</p>
+        <p>Dengan menggunakan layanan seperti AWS Lambda atau Azure Functions, pengembang dapat menjalankan kode sebagai respons terhadap peristiwa tanpa perlu mengelola infrastruktur secara langsung. Ini tidak hanya menghemat waktu, tetapi juga mengurangi biaya operasional.</p>
+        <p>Dengan semua kemajuan ini, sangat penting bagi pengembang untuk tetap terinformasi tentang tren dan teknologi terbaru untuk tetap relevan di industri yang terus berubah.</p>
+        <a class="back-link" href="#" onclick="transitionToHome()">Kembali ke Beranda</a>
+    </div>
+</body>
+</html>

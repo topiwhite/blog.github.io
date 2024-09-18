@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konsep Dasar Basis Data dan Manajemen Data</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: opacity 0.5s ease-in-out;
+            opacity: 1;
+        }
+        header, footer {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 1px solid #555;
+        }
+        .content {
+            padding: 20px;
+            margin: 10px;
+            background-color: #222;
+            border-radius: 8px;
+        }
+        h2 {
+            color: #00ff99;
+        }
+        p {
+            line-height: 1.6;
+        }
+    </style>
+    <script>
+        function transitionToPage(url) {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                window.location.href = url;
+            }, 500);
+        }
+        window.onload = function() {
+            document.body.style.opacity = '1';
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Konsep Dasar Basis Data dan Manajemen Data</h1>
+        <nav>
+            <a href="#" onclick="transitionToPage('tugas_kampus.html')">Kembali ke Tugas Kampus</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h2>1. Penjelasan Istilah-istilah:</h2>
+        <p><strong>a) Sistem File:</strong><br>
+        Merupakan cara untuk menyimpan, mengatur, dan mengelola file di dalam perangkat penyimpanan. Sistem file juga mencakup aturan-aturan tentang bagaimana data disimpan dan diakses.</p>
+
+        <p><strong>b) Ketergantungan Data dan Struktural:</strong><br>
+        Mengacu pada hubungan antara data dan struktur penyimpanan. Ketergantungan data berarti perubahan pada data dapat mempengaruhi program yang mengakses data tersebut, sedangkan ketergantungan struktural merujuk pada pengaruh perubahan pada struktur file terhadap akses data.</p>
+
+        <p><strong>c) Data:</strong><br>
+        Sekumpulan fakta mentah yang belum diolah atau diinterpretasikan. Data bisa berupa angka, teks, gambar, atau bentuk lainnya yang kemudian dapat diproses menjadi informasi.</p>
+
+        <p><strong>d) Informasi:</strong><br>
+        Hasil dari pengolahan data sehingga dapat memberikan makna atau pemahaman bagi pengguna. Informasi adalah data yang telah diorganisir dan diinterpretasikan untuk pengambilan keputusan.</p>
+
+        <p><strong>e) Basis Data:</strong><br>
+        Kumpulan data yang disusun dan dikelola secara sistematis sehingga mudah diakses, diperbarui, dan dikelola. Basis data dapat berisi berbagai jenis data yang terkait satu sama lain.</p>
+
+        <p><strong>f) Sistem Manajemen Basis Data (DBMS):</strong><br>
+        Perangkat lunak yang digunakan untuk membuat, mengelola, dan memanipulasi basis data. DBMS bertindak sebagai perantara antara pengguna dan basis data untuk melakukan operasi seperti penyimpanan, pengambilan, dan pembaruan data.</p>
+
+        <p><strong>g) Field:</strong><br>
+        Bagian terkecil dari sebuah record di basis data yang merepresentasikan atribut tertentu. Misalnya, dalam sebuah tabel 'Mahasiswa', field bisa berupa 'Nama', 'NIM', 'Alamat'.</p>
+
+        <p><strong>h) Record:</strong><br>
+        Sekumpulan field yang saling terkait yang mewakili satu entitas atau unit data tertentu. Sebagai contoh, satu record pada tabel 'Mahasiswa' bisa berisi data tentang satu mahasiswa tertentu (Nama, NIM, Alamat, dll.).</p>
+
+        <p><strong>i) File:</strong><br>
+        Kumpulan record yang disimpan dalam satu tempat di perangkat penyimpanan. Sebuah file dapat berisi banyak record dan biasanya diorganisir dalam format tertentu.</p>
+
+        <h2>2. Kelemahan Sistem File dibanding Sistem Basis Data:</h2>
+        <ul>
+            <li><strong>Redundansi dan Inkonsistensi Data:</strong> Data yang sama dapat disimpan di banyak file, menyebabkan data yang tidak konsisten.</li>
+            <li><strong>Kesulitan dalam Akses Data:</strong> Sistem file tidak memiliki mekanisme standar untuk mengakses data tertentu dengan cepat dan efisien.</li>
+            <li><strong>Kurangnya Isolasi Data:</strong> Karena data tersebar di banyak file, tidak ada pemisahan yang jelas antara aplikasi dan data.</li>
+            <li><strong>Masalah Integritas:</strong> Sulit untuk memastikan aturan integritas, seperti kunci utama yang unik, dalam sistem file.</li>
+            <li><strong>Keamanan yang Terbatas:</strong> Sistem file tidak memiliki kontrol akses yang kuat seperti yang disediakan oleh DBMS.</li>
+        </ul>
+
+        <h2>3. Kegunaan DBMS:</h2>
+        <ul>
+            <li><strong>Manajemen Data yang Terpusat:</strong> DBMS memungkinkan penyimpanan dan manajemen data dalam satu tempat, sehingga mempermudah pengelolaan data.</li>
+            <li><strong>Mengurangi Redundansi Data:</strong> Dengan basis data, data yang sama tidak perlu disimpan di banyak tempat, mengurangi duplikasi.</li>
+            <li><strong>Keamanan Data:</strong> DBMS menyediakan mekanisme kontrol akses yang kuat, sehingga hanya pengguna yang berwenang yang bisa mengakses data tertentu.</li>
+            <li><strong>Peningkatan Integritas Data:</strong> DBMS memastikan aturan-aturan integritas data seperti validasi kunci primer, kunci asing, dan konsistensi data dapat diterapkan dengan mudah.</li>
+            <li><strong>Kemudahan Akses Data:</strong> DBMS menyediakan bahasa query seperti SQL yang memudahkan pengguna untuk mengakses dan memanipulasi data.</li>
+        </ul>
+
+        <h2>4. Pentingnya Perancangan Basis Data:</h2>
+        <p>Perancangan basis data yang baik sangat penting karena membantu memastikan bahwa data diorganisir dengan cara yang efisien, aman, dan mudah diakses. Basis data yang dirancang dengan baik akan mengurangi redundansi data, menjaga integritas data, serta memungkinkan pengambilan data secara cepat dan akurat.</p>
+
+        <h2>5. Keuntungan dan Kerugian Menggunakan Basis Data:</h2>
+        <ul>
+            <li><strong>Keuntungan:</strong>
+                <ul>
+                    <li>Konsistensi dan integritas data terjaga.</li>
+                    <li>Pengelolaan data terpusat dan lebih efisien.</li>
+                    <li>Data lebih mudah diakses dan diambil menggunakan query.</li>
+                    <li>Kontrol akses yang lebih baik.</li>
+                    <li>Mengurangi redundansi data.</li>
+                </ul>
+            </li>
+            <li><strong>Kerugian:</strong>
+                <ul>
+                    <li>Biaya awal yang lebih tinggi untuk membeli dan mengatur sistem DBMS.</li>
+                    <li>Membutuhkan pelatihan pengguna agar bisa menggunakan DBMS dengan efektif.</li>
+                    <li>Sistem DBMS bisa menjadi kompleks dan memerlukan tenaga ahli untuk pemeliharaan.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        © 2024 Muhammad Abdul Hafiedh Rettob. All rights reserved.
+    </footer>
+</body>
+</html>
